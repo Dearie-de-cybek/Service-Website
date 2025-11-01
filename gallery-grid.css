@@ -1,0 +1,57 @@
+/* Responsive Image Gallery Grid */
+.er-service-details-smimg {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.er-service-details-smimg img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 0 !important;
+}
+
+.er-service-details-smimg img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Tablet - 3 columns */
+@media (max-width: 1024px) {
+    .er-service-details-smimg {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+    
+    .er-service-details-smimg img {
+        height: 220px;
+    }
+}
+
+/* Mobile Landscape - 2 columns */
+@media (max-width: 768px) {
+    .er-service-details-smimg {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .er-service-details-smimg img {
+        height: 180px;
+    }
+}
+
+/* Mobile Portrait - 1 column */
+@media (max-width: 480px) {
+    .er-service-details-smimg {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .er-service-details-smimg img {
+        height: 250px;
+    }
+}
